@@ -1,0 +1,88 @@
+/* Блок aquarium */
+.aquarium {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+.aquarium__section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 40px;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+}
+.aquarium__section--intro {
+  background: linear-gradient(to bottom, #001f3f, #001f3f 60%, #0074D9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 1.5s ease-out;
+}
+.aquarium__section--species {
+  background: #0074D9;
+  padding-top: 80px;
+}
+.aquarium__section--interactive {
+  background: #001f3f;
+}
+.aquarium__title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.aquarium__text {
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.5;
+}
+.aquarium__subtitle {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+/* Список видов */
+.species-list {
+  display: flex;
+  justify-content: space-around;
+}
+.species-list__item {
+  text-align: center;
+  cursor: pointer;
+  transition: transform .3s;
+}
+.species-list__item:hover {
+  transform: scale(1.1);
+}
+.species-list__img {
+  width: 150px;
+  animation: float 4s ease-in-out infinite;
+}
+.species-list__name {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+/* Интерактивная зона */
+.interactive-area {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+/* Для плавной прокрутки */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  scroll-snap-type: y mandatory;
+}
