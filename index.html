@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Виртуальный аквариум</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="aquarium">
+    <!-- Секция 1: Вступление -->
+    <section class="aquarium__section aquarium__section--intro">
+      <h1 class="aquarium__title">Добро пожаловать в виртуальный аквариум</h1>
+      <p class="aquarium__text">Исследуйте подводный мир, не вставая с кресла. Погружение начинается прямо сейчас!</p>
+    </section>
+    <!-- Секция 2: Виды рыб -->
+    <section class="aquarium__section aquarium__section--species">
+      <h2 class="aquarium__subtitle">Известные обитатели аквариума</h2>
+      <div class="species-list">
+        <div class="species-list__item" data-name="Клоун-рыбка">
+          <img src="clownfish.png" alt="Клоун-рыбка" class="species-list__img" />
+          <p class="species-list__name">Клоун-рыбка</p>
+        </div>
+        <div class="species-list__item" data-name="Дискус">
+          <img src="discus.png" alt="Дискус" class="species-list__img" />
+          <p class="species-list__name">Дискус</p>
+        </div>
+        <div class="species-list__item" data-name="Гуппи">
+          <img src="guppy.png" alt="Гуппи" class="species-list__img" />
+          <p class="species-list__name">Гуппи</p>
+        </div>
+      </div>
+    </section>
+    <!-- Секция 3: Взаимодействие -->
+    <section class="aquarium__section aquarium__section--interactive">
+      <h2 class="aquarium__subtitle">Кликни по рыбке и узнай о ней больше!</h2>
+      <div class="interactive-area">
+        <!-- Рыбки появятся здесь через JS -->
+      </div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
